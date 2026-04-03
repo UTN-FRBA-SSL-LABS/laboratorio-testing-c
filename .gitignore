@@ -1,0 +1,18 @@
+# Ejecutables
+programa
+test_unitarios
+test_integracion
+test_cobertura
+*.exe
+
+# Archivos objeto
+*.o
+
+# Cobertura
+*.gcda
+*.gcno
+*.gcov
+
+# macOS
+.DS_Store
+*.dSYM/

@@ -1,7 +1,10 @@
 # Ejecutables
 programa
+programa_ci
 test_unitarios
+test_unitarios_ci
 test_integracion
+test_integracion_ci
 test_cobertura
 *.exe
 

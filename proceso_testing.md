@@ -1,10 +1,4 @@
-# Laboratorio: Testing en C — Carrito de compras
-
-**Nombre:** ___________________________
-**Legajo:** ___________________________
-**Fecha:**  ___________________________
-
----
+# Laboratorio: Testing en C
 
 ## Antes de empezar
 
@@ -370,13 +364,21 @@ _(nombre de la función con el segundo bug)_
 2. Agregaste todos los tests en `tests/test_unitarios.c` y `tests/test_integracion.c`
 3. Guardaste las salidas en `salidas/`
 4. Completaste las respuestas P1–P14 y las claves en este archivo
-5. Hiciste push a `main`
+5. Verificá tu puntaje localmente antes de pushear:
+
+```bash
+make test
+```
+
+6. Hiciste push a `main`
 
 ```bash
 git add .
 git commit -m "Agrego tests y corrijo bugs en carrito"
 git push
 ```
+
+> **Tip:** el workflow de corrección solo se activa cuando pusheás cambios en `src/`, `tests/`, `salidas/` o `proceso_testing.md`. Para todo lo demás, `make test` te da el mismo resultado sin consumir minutos de GitHub Actions.
 
 ---
 

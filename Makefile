@@ -15,13 +15,8 @@ test_integracion: tests/test_integracion.c $(SRC)
 	$(CC) $(CFLAGS) $^ -o $@
 
 # ── Correr todos los tests ────────────────────────────────────────────────────
-test: test_unitarios test_integracion
-	@echo ""
-	@echo "=== Corriendo tests unitarios ==="
-	./test_unitarios
-	@echo ""
-	@echo "=== Corriendo tests de integracion ==="
-	./test_integracion
+test:
+	@bash test_local.sh
 
 # ── Cobertura con gcov ────────────────────────────────────────────────────────
 cobertura: src/carrito.c tests/test_unitarios.c

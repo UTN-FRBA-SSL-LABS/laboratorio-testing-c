@@ -3,8 +3,18 @@ name: Autograding
 on:
   push:
     branches: [ "**" ]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "salidas/**"
+      - "proceso_testing.md"
   pull_request:
     branches: [ main ]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "salidas/**"
+      - "proceso_testing.md"
 
 permissions:
   checks: write

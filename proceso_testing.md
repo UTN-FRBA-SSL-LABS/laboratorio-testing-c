@@ -360,17 +360,26 @@ _(nombre de la función con el segundo bug)_
 
 ## Entrega
 
-1. Corregiste ambos bugs en `src/carrito.c`
-2. Agregaste todos los tests en `tests/test_unitarios.c` y `tests/test_integracion.c`
-3. Guardaste las salidas en `salidas/`
-4. Completaste las respuestas P1–P14 y las claves en este archivo
-5. Verificá tu puntaje localmente antes de pushear:
+### Checklist
+
+- [ ] Ambos bugs corregidos en `src/carrito.c`
+- [ ] Tests en `tests/test_unitarios.c` y `tests/test_integracion.c` completos y pasando
+- [ ] Salidas guardadas en `salidas/`
+- [ ] Respuestas y claves completadas en este archivo
+- [ ] `make test` pasa localmente
+- [ ] Todo pusheado a `main`
+
+### Verificación local
+
+Antes de hacer push, verificá tu puntaje con:
 
 ```bash
 make test
 ```
 
-6. Hiciste push a `main`
+**Flujo recomendado:** hacé commits frecuentes mientras avanzás, usá `make test` para verificar tu progreso, y dejá el push para cuando una parte esté realmente lista.
+
+Cuando estés listo/a:
 
 ```bash
 git add .
@@ -378,7 +387,18 @@ git commit -m "Agrego tests y corrijo bugs en carrito"
 git push
 ```
 
-> **Tip:** el workflow de corrección solo se activa cuando pusheás cambios en `src/`, `tests/`, `salidas/` o `proceso_testing.md`. Para todo lo demás, `make test` te da el mismo resultado sin consumir minutos de GitHub Actions.
+### Corrección automática
+
+Cuando pusheás cambios en `src/`, `tests/`, `salidas/` o `proceso_testing.md`, GitHub ejecuta el workflow de corrección que valida los mismos checks y calcula tu puntaje oficial.
+
+> ⚠️ **Evitá pushes innecesarios.** Cada ejecución consume cómputo en servidores de GitHub — un recurso compartido. `make test` te da el mismo resultado en tu terminal sin costo.
+
+Para ver los resultados:
+
+1. Entrá a tu repositorio en GitHub
+2. Hacé click en la pestaña **Actions**
+3. Hacé click en la ejecución más reciente → job **Autograding**
+4. Al final del job vas a ver la tabla con el resultado de cada check y el puntaje total
 
 ---
 
